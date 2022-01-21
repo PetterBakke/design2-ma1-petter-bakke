@@ -3,14 +3,11 @@
 }
 
 html {
-  background-color: #e4e6c3;
-  font-family: roboto;
+  background-color: #46122e;
 }
 
-img .logo {
-  display: flex;
+.logo {
   max-width: 100%;
-  max-height: 100%;
   padding: 0;
   margin: 0;
   text-align: center;
@@ -18,15 +15,40 @@ img .logo {
 
 header {
   max-width: 100%;
-  max-height: 120px;
+  max-height: 100%;
   text-align: center;
+  padding: 0;
+  margin: 0;
   grid-column-start: 1;
   grid-column-end: 4;
 }
 
 h1 {
-  margin-top: 100px;
-  margin-right: 100px;
+  text-align: left;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-size: 50px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Lora", serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  padding: 0;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 body {
@@ -34,27 +56,13 @@ body {
   max-height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  background: repeating-linear-gradient(
-    to right,
-    #e4e6c3,
-    #e4e6c3 10px,
-    #ffff 10px,
-    #ffff 20px
-  );
-}
-
-h1 {
-  text-align: center;
 }
 
 .navigation {
   text-align: center;
-  background-color: white;
   margin: 0;
   padding: 0;
-  max-height: 100%;
+  max-height: 100px;
   max-width: 100%;
 }
 
@@ -66,44 +74,41 @@ ul {
   list-style-type: none;
 }
 
-.navigation li a {
+ul li a {
+  font-size: 20px;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: white;
+  padding: 5px;
 }
 
 .navigation li.active {
   text-decoration: underline;
+  color: white;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  margin-left: 20px;
 }
 
 .grid-item {
-  border: 10px solid #c1d3ac;
-  padding: 10px;
-  margin: 10px;
-  background-color: #c1d3ac;
+  height: auto;
+  margin: 20px;
+  background-color: #c2c0c2;
   border-radius: 15px;
   text-align: center;
+  color: white;
 }
 
 .div-pic {
-  display: flex;
-  max-height: 400px;
-  max-width: 100%;
-}
-
-.pic {
-  display: flex;
-  justify-content: center;
-  max-height: 100%;
+  max-width: 820px;
+  height: 820px;
+  float: center;
+  border-radius: 20px;
 }
 
 .btn {
-  display: flex;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -111,29 +116,36 @@ ul {
   justify-content: center;
   max-height: 100%;
   max-width: 100%;
-  cursor: pointer;
 }
 
 .cta {
-  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  width: 300px;
+  height: 70px;
+  width: 220px;
+  margin: 20px;
+  padding: 0;
   border-radius: 15px;
-  background-color: #ceaeff;
+  /* background-color: #ceaeff; */
+  background-color: rgb(255, 166, 0);
+  cursor: pointer;
 }
 
 .home {
-  max-height: 30px;
-  max-width: 50px;
-  margin-top: 10px;
+  height: 20px;
+  width: 25px;
+  margin-top: 15px;
 }
 
 .cart {
   max-height: 40px;
   max-width: 70px;
-  margin-top: 80px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .product-img {
@@ -141,7 +153,6 @@ ul {
   max-height: 300px;
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto;
   filter: drop-shadow(-10px 10px 8px black);
   padding: 20px;
 }
@@ -157,7 +168,8 @@ ul {
 
 footer {
   margin-top: 15px;
-  background-color: white;
+  padding: 5px;
+  background-color: black;
 }
 
 footer ul {
@@ -165,5 +177,59 @@ footer ul {
 }
 
 footer ul a {
-  color: rgb(0, 0, 0);
+  color: white;
+}
+
+@media (min-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  img {
+    max-width: 790px;
+    max-height: 790px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  img {
+    max-width: 600px;
+    max-height: 600px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+    font-family: "Lora", serif;
+  }
+
+  img {
+    max-width: 300px;
+    max-height: 300px;
+  }
 }
